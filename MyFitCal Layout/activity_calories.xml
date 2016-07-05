@@ -1,0 +1,256 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sebz.MyFitCal.Calories"
+    android:background="#3495ff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/calorie_title"
+        android:id="@+id/calorie_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/age_Text"
+        android:id="@+id/cal_age_view"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/calorie_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/cal_age_num"
+        android:width="200dp"
+        android:background="#fff"
+        android:layout_alignTop="@+id/cal_age_view"
+        android:layout_alignRight="@+id/cal_inches_view"
+        android:layout_alignEnd="@+id/cal_inches_view"
+
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/weight_text"
+        android:id="@+id/cal_weight_view"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/cal_age_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/cal_weight_num"
+        android:layout_alignBottom="@+id/cal_weight_view"
+        android:layout_alignRight="@+id/cal_age_num"
+        android:layout_alignEnd="@+id/cal_age_num"
+        android:width="200dp"
+        android:background="#fff"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/pounds_text"
+        android:id="@+id/cal_pounds_view"
+        android:layout_below="@+id/cal_weight_num"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/activity_level_text"
+        android:id="@+id/cal_act_level_view"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/cal_weight_view" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cal_actlevel_list"
+        android:layout_alignTop="@+id/cal_act_level_view"
+        android:layout_alignLeft="@+id/cal_feet_num"
+        android:layout_alignStart="@+id/cal_feet_num"
+        android:layout_above="@+id/cal_height_view"
+        android:background="#ffffff"
+        android:spinnerMode="dropdown"
+        android:longClickable="false"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/height_text"
+        android:id="@+id/cal_height_view"
+        android:layout_below="@+id/cal_act_level_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/feet_text"
+        android:id="@+id/cal_feet_view"
+        android:layout_below="@+id/cal_feet_num"
+        android:layout_alignRight="@+id/cal_feet_num"
+        android:layout_alignEnd="@+id/cal_feet_num" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/cal_feet_num"
+        android:width="95dp"
+        android:background="#fff"
+        android:layout_alignTop="@+id/cal_height_view"
+        android:layout_alignLeft="@+id/cal_weight_num"
+        android:layout_alignStart="@+id/cal_weight_num"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/inches_text"
+        android:id="@+id/cal_inches_view"
+        android:layout_below="@+id/cal_feet_num"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/cal_inches_num"
+        android:layout_alignTop="@+id/cal_feet_num"
+        android:width="95dp"
+        android:background="#fff"
+        android:layout_alignRight="@+id/cal_weight_num"
+        android:layout_alignEnd="@+id/cal_weight_num"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/gender_text"
+        android:id="@+id/cal_gender_view"
+        android:layout_below="@+id/cal_feet_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cal_gender_view"
+        android:layout_alignLeft="@+id/cal_feet_num"
+        android:layout_alignStart="@+id/cal_feet_num"
+        android:id="@+id/cal_radioGroup"
+        android:orientation="horizontal"
+        android:layout_below="@+id/cal_feet_view"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female_text"
+            android:id="@+id/cal_fem_button"
+            android:background="#fff"
+            android:width="100dp"
+            android:checked="false"
+            android:layout_margin="5dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male_text"
+            android:id="@+id/cal_male_button"
+            android:background="#fff"
+            android:width="100dp"
+            android:layout_margin="5dp" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_calories_text"
+        android:id="@+id/calc_calories_button"
+        android:layout_alignParentBottom="false"
+        android:layout_alignRight="@+id/cal_age_num"
+        android:layout_below="@+id/cal_goal_view"
+        android:layout_marginTop="100dp"
+        android:layout_alignWithParentIfMissing="false"
+        android:width="150dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_text"
+        android:id="@+id/cal_reset_button"
+        android:layout_alignTop="@+id/calc_calories_button"
+        android:width="150dp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/goal_text"
+        android:id="@+id/cal_goal_view"
+        android:layout_below="@+id/cal_radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cal_goal_spinner"
+        android:layout_alignTop="@+id/cal_goal_view"
+        android:layout_alignLeft="@+id/cal_radioGroup"
+        android:layout_alignStart="@+id/cal_radioGroup"
+        android:background="#fff"
+        android:layout_alignBottom="@+id/cal_goal_view"
+        android:clickable="true"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/cal_answer"
+        android:layout_below="@+id/cal_goal_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>

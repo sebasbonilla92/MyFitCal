@@ -1,0 +1,205 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sebz.MyFitCal.bmr"
+    android:background="#3495ff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/age_Text"
+        android:id="@+id/bmr_age_view"
+        android:layout_alignTop="@+id/bmr_age_num"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/bmr_age_num"
+        android:layout_marginTop="30dp"
+        android:background="#fff"
+        android:layout_below="@+id/bmr_title"
+        android:layout_alignLeft="@+id/bmr_title"
+        android:layout_alignStart="@+id/bmr_title"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/weight_text"
+        android:id="@+id/bmr_weight_view"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/bmr_age_view"
+        android:layout_alignLeft="@+id/bmr_age_view"
+        android:layout_alignStart="@+id/bmr_age_view" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/bmr_weight_num"
+        android:layout_alignTop="@+id/bmr_weight_view"
+        android:layout_alignLeft="@+id/bmr_age_num"
+        android:layout_alignStart="@+id/bmr_age_num"
+        android:background="#fff"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/height_text"
+        android:id="@+id/bmr_height_view"
+        android:layout_alignTop="@+id/bmr_feet_num"
+        android:layout_alignLeft="@+id/bmr_weight_view"
+        android:layout_alignStart="@+id/bmr_weight_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/feet_text"
+        android:id="@+id/bmr_feet_view"
+        android:layout_alignRight="@+id/bmr_feet_num"
+        android:layout_alignEnd="@+id/bmr_feet_num"
+        android:layout_below="@+id/bmr_inches_num" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/bmr_feet_num"
+        android:layout_below="@+id/bmr_weight_num"
+        android:layout_alignLeft="@+id/bmr_weight_num"
+        android:layout_alignStart="@+id/bmr_weight_num"
+        android:layout_marginTop="48dp"
+        android:background="#fff"
+        android:width="100dp"
+        android:gravity="right" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/bmr_inches_num"
+        android:width="100dp"
+        android:background="#fff"
+        android:layout_alignTop="@+id/bmr_feet_num"
+        android:layout_alignRight="@+id/bmr_weight_num"
+        android:layout_alignEnd="@+id/bmr_weight_num"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/gender_text"
+        android:id="@+id/bmr_gender_view"
+        android:layout_below="@+id/bmr_feet_view"
+        android:layout_alignLeft="@+id/bmr_height_view"
+        android:layout_alignStart="@+id/bmr_height_view"
+        android:layout_marginTop="40dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bmr_radiogroup"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/bmr_gender_view"
+        android:layout_alignLeft="@+id/bmr_title"
+        android:layout_alignStart="@+id/bmr_title">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female_text"
+            android:id="@+id/bmr_fem_button"
+            android:background="#fff"
+            android:width="100dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male_text"
+            android:id="@+id/bmr_male_button"
+            android:width="100dp"
+            android:background="#fff"
+            android:layout_marginLeft="20dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/bmr_title"
+        android:id="@+id/bmr_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculatebmr_text"
+        android:id="@+id/calc_bmr_button"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:width="150dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignWithParentIfMissing="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/bmr_answer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/bmr_radiogroup" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_text"
+        android:id="@+id/bmr_reset_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:width="150dp"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@+id/calc_bmr_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/pounds_text"
+        android:id="@+id/bmr_unit_view"
+        android:layout_below="@+id/bmr_weight_num"
+        android:layout_alignRight="@+id/bmr_inches_num"
+        android:layout_alignEnd="@+id/bmr_inches_num" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/inches_text"
+        android:id="@+id/bmr_inches_view"
+        android:layout_alignTop="@+id/bmr_feet_view"
+        android:layout_alignRight="@+id/bmr_inches_num"
+        android:layout_alignEnd="@+id/bmr_inches_num" />
+
+</RelativeLayout>
